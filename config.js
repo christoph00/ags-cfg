@@ -2,6 +2,7 @@ const desktop = ags.Window({
     name: 'desktop',
     className: 'desktop',
     monitor: 0,
+    layer: 'background',
     anchor: ['top', 'left', 'bottom', 'right'],
   });
 
