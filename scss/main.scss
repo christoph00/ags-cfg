@@ -1,0 +1,13 @@
+@import './colors';
+
+* {
+    all: unset;
+}
+
+window {
+    background-color: transparent;
+}
+
+windows.desktop {
+    background-color: $base00;
+}

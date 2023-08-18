@@ -1,19 +1,10 @@
-const desktop = ags.Window({
-    name: 'desktop',
-    className: 'desktop',
-    monitor: 0,
-    layer: 'background',
-    anchor: ['top', 'left', 'bottom', 'right'],
-  });
+const { exec, CONFIG_DIR } = ags.Utils;
 
-
+Object.keys(imports.widgets).forEach(m => imports.widgets[m]);
 
 var config = {
-    baseIconSize: 18,
-    exitOnError: false,
-    stackTraceOnError: false,
-    style: '/home/christoph/.config/ags/style.css',
-    windows: [
-      desktop
-    ]
-  }
+  style: CONFIG_DIR + '/style.css',
+  windows: [
+      imports.windows.desktop,
+  ],
+};
