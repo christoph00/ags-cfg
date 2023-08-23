@@ -1,10 +1,21 @@
+import {
+  Desktop,
+} from './widgets.js';
+
 const { exec, CONFIG_DIR } = ags.Utils;
+const { Window, Box, Label } = ags.Widget;
 
-Object.keys(imports.widgets).forEach(m => imports.widgets[m]);
 
-var config = {
+const DesktopWindow = () => Window({
+  name: 'desktop-window',
+  anchor: 'background',
+  child: Desktop(),
+});
+
+
+export default {
   style: CONFIG_DIR + '/style.css',
   windows: [
-      imports.windows.desktop,
+    DesktopWindow()
   ],
 };
