@@ -8,6 +8,61 @@ window {
     background-color: transparent;
 }
 
-windows.desktop {
-    background-color: $base00;
+
+.desktop {
+   // background-color: $base01;
+   // background-image: url("/home/christoph/Bilder/Wallpaper.jpg");
+   // background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(ellipse at center, $base01 0%, $base03 100%);
+}
+
+
+.workspaces button {
+    background-color: transparent;
+    color: #eee;
+    padding: 4px;
+}
+
+.workspaces button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #efefef;
+}
+
+.workspaces button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $base03;
+}
+
+.workspaces button.focused {
+    border: 2px solid $base06;
+    border-radius:  99px;
+    background-color: $base06;
+}
+
+.client-title {
+    margin-left: 1em;
+    color: $base05;
+}
+
+.notification image {
+    color: yellow;
+    margin-left: 1em;
+}
+
+ progressbar {
+    margin: 0 6px;
+}
+
+.clock {
+    margin: 0 6px;
+    font-size: 1.1em;
+}
+
+progress,
+highlight {
+    background-color: $base05;
+    min-height: 8px;
 }
